@@ -1,44 +1,7 @@
-<link rel="import" href="../../bower_components/polymer/☢-details.html">
+<link rel="import" href="https://raw.githubusercontent.com/justin522/justin522.github.io/master/bower_components/polymer/polymer.html">
 
 <dom-module id="☢-details">
-	<template>
-		<style>
-			:host {
-				display: block;
-			}
-			.expand ~ *:not(label):not(.summary) {
-display: none;
-}
-.det_el .expand:checked ~ *:not(label):not(.summary) {
-display: block;
-}
-.det_el .expand:checked ~ label {
-display: inline-block;
-transform: rotate(90deg);
-}
-.expand {
-display: none;
-}
-.details{
-}
-.summary{
-display: inline-block;
-background-color:blue
-}
-.det_el.exp_after label{
-float:none;
-}
-.det_el label{
-float:left;
-z-index:10;
-}
-		</style>
-		<div class="det_el">
-			<div class=summary>summary</div>
-			<input id=expand class=expand type=checkbox>
-			<label for=expand><slot name=expand-icon>▶</slot></label>
-		<div id=details>test</div>
-	</template>
+	<link rel="import" href="../templates/☢-details.html">
 
 	<script>
 		/**
