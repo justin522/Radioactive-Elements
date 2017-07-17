@@ -1,0 +1,29 @@
+:host {
+	display: block;
+}
+.☢-expand ~ *:not(label):not(.☢-summary) {
+display: none;
+}
+.☢-details-el .☢-expand:checked ~ *:not(label) {
+	display: block;
+}
+.☢-details-el .☢-expand:checked ~ label {
+	display: inline-block;
+	transform: rotate(90deg);
+}
+.☢-expand {
+	display: none;
+}
+.☢-details{
+}
+.☢-summary{
+	display: inline-block;
+	background-color:blue
+}
+.☢-details-el.exp_after label{
+	float:none;
+}
+.☢-details-el label{
+	float:left;
+	z-index:10;
+}

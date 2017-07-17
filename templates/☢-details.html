@@ -1,0 +1,36 @@
+<template>
+	<style>
+		:host {
+			display: block;
+		}
+		.expand ~ *:not(label):not(.summary) {
+			display: none;
+		}
+		.det_el .expand:checked ~ *:not(label):not(.summary) {
+			display: block;
+		}
+		.det_el .expand:checked ~ label {
+			display: inline-block;
+			transform: rotate(90deg);
+		}
+		.expand {
+			display: none;
+		}
+		.summary{
+			display: inline-block;
+			background-color:blue
+		}
+		.det_el.exp_after label{
+			float:none;
+		}
+		.det_el label{
+			float:left;
+			z-index:10;
+		}
+	</style>
+	<div class="det_el">
+		<div class=summary>summary</div>
+		<input id=expand class=expand type=checkbox>
+		<label for=expand><slot name=expand-icon>▶</slot></label>
+	<div id=details>test</div>
+</template>
